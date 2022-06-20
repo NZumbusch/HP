@@ -1,0 +1,60 @@
+.page-1 {
+    &-spacer {
+        position: absolute;
+
+        width: 40vw;
+        max-width: 800px;
+        min-width: 100px;
+        height: 0.5vw;
+        background-color: #ED1C24;
+        min-height: 2px;
+        max-height: 10px;
+    }
+
+    &-topspacer {
+        top: 0vw; // 3 for equal spacing, but this way it makes it seem like its underlining the heading from page-0?
+        right: 3vw;
+    }
+
+    &-bottomspacer {
+        display: none; // Hidden for cosmetic purposes - collides with vertical red lines from page 2???
+        bottom: 3vw;
+        left: 3vw;
+    }
+
+
+    &-img {
+        position: absolute;
+        top: 3vw; // 6 if top spacer is further down
+        bottom: 3vw; // Also six if bottom spacer is shown, toc onnect to vertical lines from pagfes 2 and 3 and 4 0
+        left: 8vw;
+        right: 8vw;
+
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+        background-color: rgba(0, 0, 0, 1);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; // Makes the image cut from both sides when resizing
+        background-image: url("./assets/img/see-bild.jpg");
+        background-blend-mode: darken;
+
+        transition: 2s background-color linear;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .page-1 {
+        height: 40%!important;
+        &-spacer {
+            height: 1vw;
+        }
+        &-bottomspacer {
+            display: initial;
+        }
+        &-img {
+            bottom: 6vw;
+        }
+    }
+}

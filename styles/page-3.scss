@@ -1,0 +1,135 @@
+.page-3 {
+    &-left {
+        position: absolute;
+        left: 0px;
+        right: 50%;
+        top: 0px;
+        bottom: 0px;
+        border-right: 5px solid #ED1C24;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; // Because of link, with center it would be centered
+        justify-content: center;
+
+        &-heading {
+            position: relative;
+            width: calc(100% - 4vw);
+            text-align: left;
+            margin: 2vw;
+            font-size: 5em;
+            color: var(--headingcolor);
+        }
+        &-heading::after {
+            content: '';
+            position: absolute;
+            bottom: -0.5vw;
+            left: -0.3vw;
+            height: 4px;
+            width: 8vw;
+            background-color: #ED1C24;
+        }
+
+        &-text {
+            width: 100%;
+            text-align: left;
+            padding: 1em;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0.03em;
+
+            color: #000000;
+        }
+
+        &-link {
+            width: auto;
+            height: auto;
+            padding: 0.5em;
+            background-color: #74C5DA;
+            border-radius: 0.3vw;
+            margin: 0vw 2vw;
+            cursor: pointer;
+        
+            transition: background-color 0.1s linear;
+        }
+        &-link:hover {
+            cursor: pointer;
+            background-color: #afdce7;
+        }
+    }
+    &-right {
+        position: absolute;
+        left: 50%;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        border-left: 5px solid #ED1C24;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        &-img {
+            position: absolute;
+            left: 5vw;
+            right: 5vw;
+            height: auto;
+            width: calc(100% - 10vw);
+
+            overflow: hidden;
+
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+    }
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .page-3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        height: auto!important;
+        margin-top: 20vw;
+
+
+        &-left {
+            position: relative;
+            width: 100%;
+            border: 0px solid transparent;
+            left: 0px;
+
+            align-items: flex-start;
+            
+            &-heading {
+                text-align: left;
+                font-size: 3em; 
+                padding: 2vw;
+            }
+            &-heading::after {
+                display: none;
+            }
+            &-text {
+                text-align: left;
+                padding: 4vw;
+            }
+            &-link {
+                margin-left: 4vw;
+                border-radius: 1vw;
+            }
+        }
+
+        &-right {
+            display: none;
+        }
+    }
+}
