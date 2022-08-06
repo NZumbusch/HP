@@ -69,7 +69,7 @@
   top: 0px;
   right: 0px;
   bottom: 0px;
-  background-color: #26cece;
+  background-color: rgb(38, 206, 206);
   height: 3vw;
   width: 3vw;
   border-radius: 2.5vw;
@@ -84,7 +84,6 @@
   #app {
     scroll-snap-type: none;
   }
-
   .colormode {
     top: 5vw;
     left: 5vw;
@@ -507,7 +506,7 @@
   text-align: right;
   margin: 2vw;
   font-size: 5em;
-  color: #000000;
+  color: var(--headingcolor);
 }
 .page-4-right-heading::after {
   content: "";
@@ -632,7 +631,7 @@
   left: 8vw;
   right: 8vw;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
