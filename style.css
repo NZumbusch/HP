@@ -118,6 +118,7 @@
   position: absolute;
   top: 3vw;
   right: 3vw;
+  max-height: 120px;
 }
 .page-0-img {
   left: 30px;
